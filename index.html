@@ -4,12 +4,12 @@
 <title></title>
 </head>
 <body>
-	<label>Type Decimal Number Here : </label>
+	<label>Type Decimal Number ( Only Int ) : </label>
 	<input type="number" id="num" onfocus="change()">
 	<p id="show"></p>
 	<script type="text/javascript">
 		function convert(){
-			var num=document.getElementById("num").value;
+			var num=Math.floor(document.getElementById("num").value);
 			var y=[];
 			i=0;
 			while(num>0){
