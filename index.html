@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+	<label>Type Decimal Number Here : </label>
+	<input type="number" id="num" onfocus="change()">
+	<p id="show"></p>
+	<script type="text/javascript">
+		function convert(){
+			var num=document.getElementById("num").value;
+			var y=[];
+			i=0;
+			while(num>0){
+				y[i]=num%2;
+				num=Math.floor(num/2);
+				i++;
+			}
+		document.getElementById("show").innerHTML=(y.reverse()).join('');
+		}
+		function change(){
+			setInterval("convert()",1);
+		}
+	</script>
+</body>
+</html>
